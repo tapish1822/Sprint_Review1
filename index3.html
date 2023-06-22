@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee's Progress</title>
+  <script src = "C:\Users\HP\Desktop\JS\script3.js">
+    // Sample employee data
+   
+  </script>
+</head>
+<body>
+  <h1>Employee Filter</h1>
+
+  <label for="stress-level">Filter by Stress Level:</label>
+  <input type="number" id="stress-level" min="0" max="10">
+  <button onclick="filterByStressLevel(Number(document.getElementById('stress-level').value))">Filter</button>
+
+  <br>
+
+  <label for="anxiety-level">Filter by Anxiety Level:</label>
+  <input type="number" id="anxiety-level" min="0" max="10">
+  <button onclick="filterByAnxietyLevel(Number(document.getElementById('anxiety-level').value))">Filter</button>
+
+  <br>
+
+  <label for="stress-anxiety-level">Filter by Stress and Anxiety Levels:</label>
+  <input type="number" id="stress-anxiety-level" min="0" max="100">
+  <button onclick="filterByStressAndAnxietyLevel(
+    Number(document.getElementById('stress-anxiety-level').value),
+    Number(document.getElementById('anxiety-level').value)
+  )">Filter</button>
+
+  <br>
+
+  <h2>Filtered Employees:</h2>
+  <div id="employee-list"></div>
+</body>
+</html>
